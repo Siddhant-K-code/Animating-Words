@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Animating Words</title>
+	<link href="styles/form.css" rel="stylesheet" type="text/css" />
+	<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="align-center">
+		<section class="align-center">
+			<h3>Enter words to randomise</h3>
+			<div class="m-t-10">
+				<input type="text" name="words" placeholder="Max: 16 characters" maxlength="16" />
+          <button name="randomise" disabled>Go!</button>
+        </div>
+      </section>
+      <section class="align-center m-t-20">
+        <h3>Milliseconds between each change</h3>
+        <div class="m-t-5">
+          <input 
+            type="range"
+            class="slider"
+            name="slider"
+            value="50"
+            max="500"
+            min="1" 
+          />
+          <span class="slider-display"></span>
+        </div>
+      </section
+    </div>
+    <div class="wrapper align-center">
+      <section class="letters normal"></section>
+      <section class="letters mirrored"></section>
+    </div>
+
+    <script src="https://cdn.rawgit.com/khalidsalomao/simple-query-string/22cc5bbe/src/simplequerystring.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+body {
+  --near-black: hsl(258, 67%, 4%);
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsl(258, 18%, 80%);
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: max(1rem, 3vmin);
+  margin: 25px;
+  background: linear-gradient(0deg,
+    hsl(258, 17%, 20%) 10%,
+    var(--near-black) 50%
+  );
+}
+
+h3 {
+  margin: 0;
+  text-align: center;
+  font-size: max(1.125rem, 4vmin);
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  height: 65vh;
+  max-width: 70vmin;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letters {
+  font-size: max(10vmin, 2rem);
+  font-family: 'Major Mono Display', monospace;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.letters > .text {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.letters.normal > .text {
+  position: initial;
+  color: var(--col);
+  transform: scale(1);
+  z-index: -1;
+}
+
+.letters.normal > .text:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+.letters.mirrored > .text {
+  position: initial;
+  transform: scaleX(1) scaleY(-1);
+  opacity: 0.7;
+  background: linear-gradient(180deg, transparent, var(--col));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-size: 100%;
+  filter: blur(1px);
+  z-index: -1;
+}
+
+.letters.mirrored > .text:hover {
+  transform: scaleX(1.5) scaleY(-1.5);
+  z-index: 10;
+}
+
+input[name='words'], button[name='randomise'] {
+  padding: 4px 8px;
+  margin: 0;
+  font-size: max(1rem, 3vmin);
+  font-weight: bold;
+  background-color: hsl(258, 18%, 18%);
+  color: hsl(258, 18%, 85%);
+  border: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button[name='randomise'] {
+  background-color: hsl(258, 17%, 35%);
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: initial;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background-color: hsl(258, 18%, 90%);
+  color: #000;
+  transition: all 0.25s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
